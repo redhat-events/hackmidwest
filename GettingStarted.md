@@ -121,3 +121,13 @@ Create an example Python Application
   * Select your team project from the Project dropdown  
   * Open Location Url  
 * Username and Password from the credentials file
+
+### RAG Demo
+* Task completion application demo using RAG with
+  * Redis Vector Database
+  * Strapi Headless CMS
+  * Quarkus API
+  * vLLM model serving on OpenShift
+  * LLAMA 3.1 model
+  * Keycloak SSO
+* [Source Code on Github](https://github.com/redhat-events/ai-hackathon-starter)

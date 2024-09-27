@@ -10,7 +10,10 @@
 **OpenShift** with **OpenShift AI** running on<br/>
 **Intel** with **AMX** acceleration.
 
-* Getting Started Video: [https://youtu.be/vrXaFO8L-3U](https://youtu.be/vrXaFO8L-3U)
+* Getting Started: 
+  * [Video](https://youtu.be/vrXaFO8L-3U)
+  * [GUIDE](GettingStarted.md)
+
 
 * OpenShift DevSpaces CDE/IDE [User guide](https://docs.redhat.com/en/documentation/red_hat_openshift_dev_spaces/3.16/html/user_guide/index)
 * OpenShift AI example app [Fraud Detection](https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html)

@@ -1,155 +1,126 @@
-# Hack Midwest 2024 Getting Started with OpenShift AI {#hack-midwest-2024-getting-started-with-openshift-ai}
-
-[**Hack Midwest 2024 Getting Started with OpenShift AI**](#hack-midwest-2024-getting-started-with-openshift-ai)
-
-[Contact Information](#contact-information)
-
-[Resources:](#resources:)
-
-[Getting Started:](#getting-started:)
-
-[OpenShift Dev Spaces (example app)](#openshift-dev-spaces-\(example-app\))
-
-[OpenShift AI](#openshift-ai)
-
-[OpenShift Application](#openshift-application)
-
-[MinIO Admin](#minio-admin)
-
-[Sample Application with RAG use case using](#heading=h.m9g031qsx6y4)
-
+# Hack Midwest 2024 Getting Started with OpenShift AI 
 ## Contact Information {#contact-information}
 
 * Intel, Technical Sales Specialist, Dennis Hitaj ([dennis.hitaj@intel.com](mailto:dennis.hitaj@intel.com))  
 * Red Hat, Technical Sales Specialist, Daniel Schimpfoessl ([dds@redhat.com](mailto:dds@redhat.com))
 
-## Resources: {#resources:}
+## Resources:
+### Rules  
+* Event \- [https://hackmidwest.com/index.html\#faq](https://hackmidwest.com/index.html#faq)   
+* Prize \- [https://hackmidwest.com/index.html\#prizes](https://hackmidwest.com/index.html#prizes)   
+### References  
+* Understanding AI \- [Introduction to RHOAI](https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html)   
+* OpenShift \- [Documentation](https://docs.redhat.com/en/documentation/openshift_container_platform/4.16)   
+* ROSA \- [https://aws.amazon.com/rosa/](https://aws.amazon.com/rosa/)   
+* Introduction to Red Hat OpenShift AI 
 
-	Rules  
-		Event \- [https://hackmidwest.com/index.html\#faq](https://hackmidwest.com/index.html#faq)   
-		Prize \- [https://hackmidwest.com/index.html\#prizes](https://hackmidwest.com/index.html#prizes)   
-References  
-	Understanding AI \- [https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html](https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html)   
-OpenShift \- [https://docs.redhat.com/en/documentation/openshift\_container\_platform/4.16](https://docs.redhat.com/en/documentation/openshift_container_platform/4.16)   
-	ROSA \- [https://aws.amazon.com/rosa/](https://aws.amazon.com/rosa/)   
-	OpenShift AI \- [https://docs.redhat.com/en/documentation/red\_hat\_openshift\_ai\_self-managed/2.13](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2.13)   
-Introduction to Red Hat OpenShift AI 
+  * [Overview](https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai)   
+  * [Documentation](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2.13)   
+  * [Quick Courses](https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html) 
+  * [Getting Started Workshop - Fraud Detection](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2-latest/html/openshift_ai_tutorial_-_fraud_detection_example/index)
+* APIs and Libraries 
+  * [Intel OpenVINO Toolkit](https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html)
+  * OPEA \- [https://opea.dev/](https://opea.dev/)
+  * Validated Patterns \- [https://validatedpatterns.io/search/?query=amx](https://validatedpatterns.io/search/?query=amx)  
+  * LangChain \- [https://python.langchain.com/v0.2/docs/integrations/text\_embedding/](https://python.langchain.com/v0.2/docs/integrations/text_embedding/)   
+* Introduction to Intel Resources
+  * Intel AMX AI Hardware Acceleration \- [Intel AI Hardware Overview](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html)  
+  * Intel Sample Code and Notebooks \- [Intel AI Kit Workbench](https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.dpha4c)  
+* Sample Applications
+  * Red Hat OpenShift AI learning \- [Sample Applications](https://developers.redhat.com/learn/openshift-ai)  
+  * Parasol Insurance Demo:      
+    * [Code](https://github.com/rh-aiservices-bu/parasol-insurance)  
+[Instructions](https://rh-aiservices-bu.github.io/parasol-insurance/modules/index.html)  
+  * **Fraud Detection Demo:**  
+  * [Code](https://github.com/rh-aiservices-bu/fraud-detection)  
+    * [Instructions](https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html)  
+* Developer Examples  
+  * [LLM on OpenShift](https://github.com/rh-aiservices-bu/llm-on-openshift)  
 
-- [Red Hat OpenShift AI Overview](https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai)   
-- [https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html](https://redhatquickcourses.github.io/rhods-intro/rhods-intro/1.33/index.html) 
+## Environment URLs and Credentials
+> **Note**:	See provided file
 
-  Getting Started Workshop \- [Red Hat OpenShift AI Workshop](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2-latest/html/openshift_ai_tutorial_-_fraud_detection_example/index)
-
-  APIs and Libraries \- [Intel OpenVINO Toolkit](https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/overview.html)
-
-  OPEA \- [https://opea.dev/](https://opea.dev/)
-
-	Validated Patterns \- [https://validatedpatterns.io/search/?query=amx](https://validatedpatterns.io/search/?query=amx)  
-	LangChain \- [https://python.langchain.com/v0.2/docs/integrations/text\_embedding/](https://python.langchain.com/v0.2/docs/integrations/text_embedding/)   
-Intel AMX AI Hardware Acceleration \- [Intel AI Hardware Overview](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html)  
-Intel Sample Code and Notebooks \- [Intel AI Kit Workbench](https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit.html#gs.dpha4c)  
-Sample Applications  
-	Red Hat OpenShift AI learning \- [Sample Applications](https://developers.redhat.com/learn/openshift-ai)  
-Parasol Insurance Demo:      
-[https://github.com/rh-aiservices-bu/parasol-insurance](https://github.com/rh-aiservices-bu/parasol-insurance)  
-[https://rh-aiservices-bu.github.io/parasol-insurance/modules/index.html](https://rh-aiservices-bu.github.io/parasol-insurance/modules/index.html)  
-**Fraud Detection Demo:**  
-	[https://github.com/rh-aiservices-bu/fraud-detection](https://github.com/rh-aiservices-bu/fraud-detection)  
-[https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html](https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html)  
-Developer Examples  
-	[https://developers.redhat.com/products/red-hat-openshift-ai/getting-started](https://developers.redhat.com/products/red-hat-openshift-ai/getting-started)  
-	[https://github.com/rh-aiservices-bu/llm-on-openshift](https://github.com/rh-aiservices-bu/llm-on-openshift)  
-Environment  
-	**See provided file**
-
-## Getting Started: {#getting-started:}
-
-**See provided video**  
+## Getting Started:
+> **Note**: See provided video
 To get started, you will be provided with a private git repository. Use the instructions below to create your OpenShift Dev Spaces workspace. 
 
 #### OpenShift Dev Spaces ([example app](https://github.com/purefield-demo-team/devfile-sample-python-basic)) {#openshift-dev-spaces-(example-app)}
 
-- [ ] Log into the provided GitHub account containing your repository  
-- [ ] Add GitHub token for Dev Spaces access  
-      - [ ] Create fine-grained personal access tokens \- [https://github.com/settings/tokens?type=beta](https://github.com/settings/tokens?type=beta)  
-            ![][image1]  
-            Give the permissions to allow for read/write access to the repository  
-            ![][image2]  
-            After creating the token, save it to a local text file. Make sure to save it somewhere as it cannot be recreated.   
+* Log into the provided GitHub account containing your repository  
+* Add GitHub token for Dev Spaces access  
+  * Create fine-grained personal access tokens \- [https://github.com/settings/tokens?type=beta](https://github.com/settings/tokens?type=beta)  
+    ![][image1]  
+    Give the permissions to allow for read/write access to the repository  
+    ![][image2]  
+    After creating the token, save it to a local text file. Make sure to save it somewhere as it cannot be recreated.   
               
-- [ ] Open the OpenShift console at the URL provided to you and select “ai-hacker” to log in with the credentials provided to you  
-      ![][image3]  
+* Open the OpenShift console at the URL provided to you and select “ai-hacker” to log in with the credentials provided to you  
+  ![][image3]  
         
-- [ ] Open the OpenShift Dev Spaces UI \- look for the application grid icon on the top right of the console.  
-      ![][image4]  
-      Approve all the access requests  
+* Open the OpenShift Dev Spaces UI \- look for the application grid icon on the top right of the console.  
+  ![][image4]  
+  Approve all the access requests  
         
-- [ ] Create new Dev Spaces workspace from your GitHub repository URL  
-- [ ] ![][image5]
+* Create new Dev Spaces workspace from your GitHub repository URL  
+* ![][image5]
 
-- [ ] Open the Dev Spaces workspace  
-      ![][image6]  
-- [ ] Open Terminal (top right pane icon with white bottom)![][image7]  
-- [ ] Configure git user and credentials via git push from terminal  
-      - [ ] See README.md for example [Sample Python App](https://github.com/purefield-demo-team/devfile-sample-python-basic/blob/with-ai-model/README.md)   
-- [ ] Run your app inside Dev Spaces  
-      - [ ] See README.md for example [Sample Python App](https://github.com/purefield-demo-team/devfile-sample-python-basic/blob/with-ai-model/README.md)   
-      - [ ] Expose port  
-            ![][image8]  
-      - [ ] Open URL in tab or link inside Dev Spaces  
-            ![][image9]  
-- [ ] Edit, commit and view
+* Open the Dev Spaces workspace  
+  ![][image6]  
+* Open Terminal (top right pane icon with white bottom)![][image7]  
+* Configure git user and credentials via git push from terminal  
+  * See README.md for example [Sample Python App](https://github.com/purefield-demo-team/devfile-sample-python-basic/blob/with-ai-model/README.md)   
+* Run your app inside Dev Spaces  
+  * See README.md for example [Sample Python App](https://github.com/purefield-demo-team/devfile-sample-python-basic/blob/with-ai-model/README.md)   
+  * Expose port  
+    ![][image8]  
+  * Open URL in tab or link inside Dev Spaces  
+    ![][image9]  
+* Edit, commit and view
 
 #### OpenShift AI {#openshift-ai}
 
-- [ ] Open OpenShift AI from app menu  
-      ![][image4]  
-- [ ] Log In using OpenShift Credentials  
-      ![][image10]  
-- [ ] You already have your team Data Science project setup with   
-      - [ ] Data Connections for two S3 buckets  
-- [ ] For directions follow tutorial for Fraud Detection app for workbenches setup  
-      - [ ] DataScience Project is already created  
-      - [ ] Storage and Data Connections have been already created  
-      - [ ] [https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html](https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html)
+* Open OpenShift AI from app menu  
+  ![][image4]  
+* Log In using OpenShift Credentials  
+  ![][image10]  
+* You already have your team Data Science project setup with   
+      * Data Connections for two S3 buckets  
+* For directions follow tutorial for Fraud Detection app for workbenches setup  
+      * DataScience Project is already created  
+      * Storage and Data Connections have been already created  
+      * [Fraud Detection Workshop](https://rh-aiservices-bu.github.io/fraud-detection/fraud-detection-workshop/index.html)
 
-#### OpenShift Application {#openshift-application}
-
+#### OpenShift Application
 Create an example Python Application
 
-- [ ] Create the Python app using your favorite cli or ide. Example…
-
+* Create the Python app using your favorite cli or ide. Example…
 ![][image11]
+* Add the appropriate .gitignore (These are helpful [https://github.com/github/gitignore](https://github.com/github/gitignore))  
+* Add the project folder into your git repository, commit and push.   
+* In the developer perspective in OpenShift create a new application from Git  
+  * select your namespace (if not already selected)  
+    ![][image12]  
+  * select “+ add” button and click on the “Import from Git” option  
+    ![][image13]            
+  * Fill out git information during which you will need to add a secret with your GitHub token you created from the previous step   
+    ![][image14]  
+    ![][image15]  
+  * Use the Builder Image  
+    ![][image16]  
+  * Setup Pipelines  
+    ![][image17]  
+* Add pipelines Trigger url / secret to Github Settings \-\> Webhooks using json type  
+  * Use \*github\* secret from Secrets in OpenShift in your project  
+    ![][image18]  
+  * Edit pipeline yaml change ```oc rollout status``` to ```oc rollout restart```
+* Bring your model into your application  
+  * https://github.com/redhat-events/devfile-sample-python-basic/blob/with-ai-model/app.py
 
-- [ ] Add the appropriate .gitignore (These are helpful [https://github.com/github/gitignore](https://github.com/github/gitignore))  
-- [ ] Add the project folder into your git repository, commit and push.   
-- [ ] In the developer perspective in OpenShift create a new application from Git  
-      - [ ] select your namespace (if not already selected)  
-            ![][image12]  
-              
-      - [ ] select “+ add” button and click on the “Import from Git” option  
-            ![][image13]  
-              
-      - [ ] Fill out git information during which you will need to add a secret with your GitHub token you created from the previous step   
-            ![][image14]  
-            ![][image15]  
-      - [ ] Use the Builder Image  
-            ![][image16]  
-      - [ ] Setup Pipelines  
-            ![][image17]  
-- [ ] Add pipelines Trigger url / secret to Github Settings \-\> Webhooks using json type  
-      - [ ] Use \*github\* secret from Secrets in OpenShift in your project  
-            ![][image18]  
-      - [ ] Edit pipeline yaml change **oc rollout status** to **oc rollout restart**  
-- [ ] Bring your model into your application  
-      - [ ] https://github.com/redhat-events/devfile-sample-python-basic/blob/with-ai-model/app.py
-
-#### MinIO Admin {#minio-admin}
-
-- [ ] [https://console-openshift-console.apps.rosa.rosa-t8j8w.ft2c.p3.openshiftapps.com/k8s/all-namespaces/route.openshift.io\~v1\~Route?name=MinIO-console](https://console-openshift-console.apps.rosa.rosa-t8j8w.ft2c.p3.openshiftapps.com/k8s/all-namespaces/route.openshift.io~v1~Route?name=MinIO-console)  
-      - [ ] Select your team project from the Project dropdown  
-      - [ ] Open Location Url  
-- [ ] Username and Password from the credentials file
+#### MinIO Admin
+* [MinIO-console](https://console-openshift-console.apps.rosa.rosa-t8j8w.ft2c.p3.openshiftapps.com/k8s/all-namespaces/route.openshift.io~v1~Route?name=MinIO-console)  
+  * Select your team project from the Project dropdown  
+  * Open Location Url  
+* Username and Password from the credentials file
 
 	
 

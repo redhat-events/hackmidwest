@@ -20,4 +20,4 @@
 
 * Intel AMX AI Hardware Acceleration - [Intel AI Hardware Overview](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/advanced-matrix-extensions/overview.html)  
 
-![Red Hat AI Environment](./redhat-ai-environment.png)
+![Red Hat AI Environment](./images/redhat-ai-environment.png)
